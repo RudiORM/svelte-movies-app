@@ -5,8 +5,8 @@
 
   const IMAGE_API = 'https://image.tmdb.org/t/p/w300'
   const DEFAULT_IMG = './images/default.jpg'
-  const API_KEY = process.env.API_KEY
-  const KNOWN_API = `https://api.themoviedb.org/3/person/${personId}/movie_credits?api_key=${API_KEY}&language=en-US`
+  const ApiKey = process.env.API_KEY
+  const KNOWN_API = `https://api.themoviedb.org/3/person/${personId}/movie_credits?api_key=${ApiKey}&language=en-US`
 
   let movies = []
 
