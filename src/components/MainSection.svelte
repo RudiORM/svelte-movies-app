@@ -6,10 +6,8 @@
 	import { onMount, afterUpdate } from 'svelte'
 	import { current_page } from './store.js'
 	export let api_url
-	export let genres
 	$current_page = 1
 	let movies =[]
-	console.log('Main genres', genres)
 	
 	let total_pages = 0;
 	let scroll = 0	
