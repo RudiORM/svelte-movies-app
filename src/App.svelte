@@ -3,11 +3,18 @@
 	import routes from './routes.js';
 	import Header from './components/Header.svelte'
 	import Genres from './components/Genres.svelte'
-	console.log(process.env)
+
+
+	if (process.env.$API_KEY) 
+		{console.log('process.env.$API_KEY',process.env.$API_KEY)
+	}
+	if (process.env.API_KEY) {
+		console.log('process.env.API_KEY',process.env.API_KEY)
+	}
+
 </script>
 
 <main>
-
 	<Header />
 	<Genres />
 	<Router {routes} />

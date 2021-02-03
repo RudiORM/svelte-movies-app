@@ -39,8 +39,10 @@ export default {
 		file: 'public/build/bundle.js'
 	},
 	plugins: [
-		replace({FOO: 'bar',
-		process: JSON.stringify({
+		replace({
+			
+			FOO: 'bar',
+			process: JSON.stringify({
 			env: {
 				isProd: production,
 				...config().parsed
