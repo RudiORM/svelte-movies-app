@@ -3,6 +3,7 @@
 	import routes from './routes.js';
 	import Header from './components/Header.svelte'
 	import Genres from './components/Genres.svelte'
+	console.log(process.env)
 </script>
 
 <main>
