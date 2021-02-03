@@ -39,20 +39,21 @@ export default {
 		file: 'public/build/bundle.js'
 	},
 	plugins: [
+		replace({FOO: 'bar',
+		process: JSON.stringify({
+			env: {
+				isProd: production,
+				...config().parsed
+			} 
+		}),
+	}),
 		svelte({
 			compilerOptions: {
 				// enable run-time checks when not in production
 				dev: !production
 			}
 		}),
-		replace({   FOO: 'bar',      
-			process: JSON.stringify({
-				env: {
-					isProd: production,
-					...config().parsed
-				} 
-			}),
-		}),
+
 		// we'll extract any component CSS out into
 		// a separate file - better for performance
 		css({ output: 'bundle.css' }),
