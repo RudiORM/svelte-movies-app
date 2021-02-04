@@ -9,6 +9,8 @@ import replace from '@rollup/plugin-replace';
 
 const production = !process.env.ROLLUP_WATCH;
 
+config()
+
 function serve() {
 	let server;
 
