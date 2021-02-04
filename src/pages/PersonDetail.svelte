@@ -3,7 +3,7 @@
   import KnownFor from '../components/KnownFor.svelte'
   export let params
   
-  const ApiKey = process.env.API_KEY
+  const ApiKey = __myapp.env.API_KEY
   const PERSONS_API = `https://api.themoviedb.org/3/person/${params.id}?api_key=${ApiKey}&language=en-US`
   const IMAGE_API = 'https://image.tmdb.org/t/p/w500/'
   let person = []
