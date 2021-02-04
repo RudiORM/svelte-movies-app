@@ -5,12 +5,13 @@
 	import Genres from './components/Genres.svelte'
 
 
-	if (process.env.$API_KEY) 
-		{console.log('process.env.$API_KEY',process.env.$API_KEY)
-	}
-	if (process.env.API_KEY) {
-		console.log('process.env.API_KEY',process.env.API_KEY)
-	}
+	// if (process.env.$API_KEY) 
+	// 	{console.log('process.env.$API_KEY',process.env.$API_KEY)
+	// }
+	// if (process.env.API_KEY) {
+	// 	console.log('process.env.API_KEY',process.env.API_KEY)
+	// }
+	console.log(__myapp.env.API_KEY)
 
 </script>
 

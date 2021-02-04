@@ -2,7 +2,7 @@
   import { onMount } from  'svelte'
   
   export let movie_id
-  const ApiKey = process.env.API_KEY
+  const ApiKey = __myapp.env.API_KEY
   const PERSONS_API = `https://api.themoviedb.org/3/movie/${movie_id}/credits?api_key=${ApiKey}&language=en-US`
   const IMAGE_API = 'https://image.tmdb.org/t/p/w200/'
   let persons = []
