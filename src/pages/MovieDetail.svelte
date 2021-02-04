@@ -9,7 +9,7 @@
   export let params
   let movie_id = params.id
 
-  const ApiKey = process.env.API_KEY
+  const ApiKey = __myapp.env.API_KEY
   const MOVIE_DETAIL_API = `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${ApiKey}&language=en-US`
   const VIDEO_API = `https://api.themoviedb.org/3/movie/${movie_id}/videos?api_key=${ApiKey}&language=en-US`
   const IMAGE_API = "https://image.tmdb.org/t/p/"
