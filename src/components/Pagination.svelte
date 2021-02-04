@@ -12,7 +12,7 @@
   const RIGHT_PAGE = 'RIGHT';
   const totalNumbers = 9
   const totalBlocks = 11
-  $: console.log('movie pagination')
+
   function rangex(size, startAt = 0) {
     return [...Array(size).keys()].map(i => i + startAt);
   }

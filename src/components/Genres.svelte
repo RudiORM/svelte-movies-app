@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte'
-	// import { current_page } from './store';
+
   const ApiKey = __myapp.env.API_KEY
 	const GENRES_API = `https://api.themoviedb.org/3/genre/movie/list?api_key=${ApiKey}&language-en-GB`
 
@@ -11,8 +11,6 @@
 		.then(x => x.json())
 		.then(x => x.genres)
 		})
-
-
 
 </script>
 

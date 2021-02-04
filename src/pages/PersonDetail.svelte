@@ -12,7 +12,6 @@
   onMount(async () => {
     person = await fetch(PERSONS_API)
     .then(x => x.json())
-    console.log(person.also_known_as.length)
 	})
 
   function toggleTrailer() {
