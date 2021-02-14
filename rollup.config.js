@@ -43,12 +43,12 @@ export default {
 	plugins: [
 		replace({
 			__myapp: JSON.stringify({
-			env: {
-				isProd: production,
-				API_KEY : process.env.API_KEY
-			} 
+				env: {
+					isProd: production,
+					API_KEY : process.env.API_KEY
+				} 
+			}),
 		}),
-	}),
 		svelte({
 			compilerOptions: {
 				// enable run-time checks when not in production

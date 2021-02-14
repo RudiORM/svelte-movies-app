@@ -5,7 +5,7 @@
 	export let movies
 </script>
 
-<section class='movie-container' in:fade="{{duration: 1500}}" >
+<section class='movie-container'>
 	{#if movies.length > 0 } 
 		{#each movies as movie}
 		<MovieCard key={movie.id} {...movie}/>

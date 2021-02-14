@@ -82,42 +82,43 @@
 
 <style>
   i {
-    font-size: 20px;
+    font-size: 14px;
   }
 
   .page-link {
 		background-color:var(--secondary-colour);
 		border-radius:30px;
 		border: 2px solid var(--border-colour);
-		margin: 5px 10px;
+		margin: 2px 10px;
 		text-decoration: none;
 		font-weight: 600;
-		padding-bottom: 4px;
-		padding-left: 20px;
-		padding-right: 20px;
-		padding-top: 2px;
+		padding-bottom: 2px;
+		padding-left: 37px;
+		padding-right: 37px;
+		padding-top: 1px;
 		display: flex;
 		justify-content: center;
 		transition: all .4s ease-in-out;
   }  
   .page-link:hover {
-    transform: scale(1.2);
-  }
+    background-color: rgb(155, 89, 218);
+		color: black;
+	}
   .active {
     font-weight: 900;
-    background-color: red;
+    background-color: rgb(100, 6, 6);
     scale: 1.1;
   }
 
 	.pagination {
 		background-color: var(--primary-colour);
 		max-width: 1250px;
-		margin: 10px auto;
-		padding: 5px 20px;
-		display: flex;
+		margin: 5px auto;
+		padding: 2px;
+    display: flex;
+    flex: wrap;
     justify-content: center;
-		flex-wrap: wrap;
-		font-size: 16px;
+		font-size: 12px;
 		border-radius: 15px;
 	}
 </style>

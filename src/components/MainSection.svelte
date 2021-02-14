@@ -3,7 +3,7 @@
 	import Pagination from './Pagination.svelte'
 	import MorePages from './MorePages.svelte'
 	import {fade} from 'svelte/transition'
-	import { onMount, afterUpdate } from 'svelte'
+	import { onMount, afterUpdate, beforeUpdate, tick} from 'svelte'
 	import { current_page } from './store.js'
 	export let api_url
 	$current_page = 1
@@ -22,15 +22,16 @@
 		const res_json = await res.json()
 		movies = await res_json.results
 		total_pages = res_json.total_pages
-		
 	}
 
  async function moreMovies (API) {
-		scroll = (document.body.scrollHeight)
 		const res = await fetch(API)
 		const res_json = await res.json()
 		const res_results = await res_json.results
+		// await tick()
+		scroll = (document.body.scrollHeight)
 		movies = [...movies,...res_results ]
+		
  }
 
  afterUpdate(() => {
@@ -41,7 +42,6 @@
 
 {#if total_pages&&$current_page}
 	<Pagination
-		{$current_page}
 		{total_pages}
 		on:change="{(ev) => getMovies(api_url + ev.detail)}">
 	</Pagination>
@@ -51,7 +51,6 @@
 
 {#if (total_pages-$current_page)}
 	<MorePages 
-		{$current_page}
     {total_pages}
     on:change="{(ev) => moreMovies(api_url + ev.detail)}">
 	</MorePages>

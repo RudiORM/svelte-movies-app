@@ -2,7 +2,6 @@
 	import MainSection from '../components/MainSection.svelte'
 
 	export let params
-	$: genre = params.id
 
   const ApiKey = __myapp.env.API_KEY
 	const MOVIE_GENRE_API = `https://api.themoviedb.org/3/discover/movie?api_key=${ApiKey}&with_genres=`

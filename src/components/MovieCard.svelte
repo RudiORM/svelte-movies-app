@@ -16,16 +16,16 @@
 </script>
 {#if id}
 
-  <div class='movie' >
+  <div class='movie'>
     <div class= 'movie-inner'>
-      <div class='movie-front' >
-        <img class='movie-img' transition:fade src={poster_path ? IMAGE_API + poster_path : DEFAULT_IMG } alt={title} /> 
+      <div class='movie-front'>
+        <img class='movie-img'  src={poster_path ? IMAGE_API + poster_path : DEFAULT_IMG } alt={title} /> 
         <div class='movie-info'>
           <h3>{ title }</h3>
           <p class='release-date'>{release_date ? release_date.substring(0,4) : undefined}</p>
-            <div class='vote'>
-              <ProgressBar progress={vote_average} />
-            </div>
+        </div>
+        <div class='vote'>
+          <ProgressBar progress={vote_average} />
         </div>
       </div>
       <a class='movie-back'href=#/movie/{id}>
@@ -54,6 +54,7 @@
     justify-content:space-between;
     background-color: transparent;
     width: 230px;
+    
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     perspective: 1000px;
@@ -117,6 +118,7 @@
     object-fit: cover;
     /* height: 500px; */
     max-width: 100%;
+    height: 345px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom: 1px solid rgb(165, 165, 165)
